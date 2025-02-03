@@ -3,9 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weekly Sketch 2</title>
+    <title>Pool-Like Background</title>
+    <style>
+        body {
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #000000, #003366, #0077cc, #00aaff, #0099ff, #000000);
+            background-size: 200% 200%;
+            animation: gradientShift 10s infinite alternate;
+        }
+      @keyframes unblur {
+        0% filter: blur(0.9px);
+        25% filter: blur(0.5px);
+        100% filter: blur(0.0px);
+      }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 0%; }
+            100% { background-position: 100% 100%; }
+        }
+      
+      
+              button {
+            padding: 15px 30px;
+            font-size: 18px;
+            background-color: #00aaff;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            font-family: 'Arial', sans-serif;
+            position: relative;
+            text-shadow: 
+                1px 1px 5px rgba(0, 170, 255, 0.6),
+                -1px -1px 5px rgba(0, 170, 255, 0.6),
+                0px 0px 10px rgba(0, 170, 255, 0.8);
+            filter: blur(0.9px);
+            animation: unblur 5s infinite alternate;
+        }
+
+        button:hover {
+            background-color: #0077cc;
+                      text-shadow: 
+                1px 1px 10px rgba(0, 170, 255, 0.8),
+                -1px -1px 10px rgba(0, 170, 255, 0.8),
+                0px 0px 20px rgba(0, 170, 255, 1);
+          filter: blur(0.0px);
+        }
+    </style>
 </head>
 <body>
-    <!-- Your content goes here -->
+  <button>Jump In?</button>
 </body>
 </html>
